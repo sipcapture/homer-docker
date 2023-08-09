@@ -1,15 +1,20 @@
-<img src="https://github.com/sipcapture/homer7-docker/assets/1423657/36a8e515-ab0e-482b-bf49-2156e290c764" width=270>
+<img src="https://github.com/sipcapture/homer7-docker/assets/1423657/36a8e515-ab0e-482b-bf49-2156e290c764" height=200><img src="https://github.com/sipcapture/homer-docker/assets/1423657/8997d282-0c29-4137-a1ef-e9be79a54284" height=200/>
+
 
 
 # homer 10 + qryn (all-in-one)
 The ultimate  **homer** + **qryn.js** docker demo w/ sample _hep traffic, logs, traces and metrics_ - _batteries included!_ :battery::battery:
+
+- HOMER 10 = _qryn.js + heplify-server + clickhouse-server + grafana-server_
 
 > All the backend features for all supported protocols are provided by **qryn** and **clickhouse** - no other components required!
 
 <br />
 
 
-[![184538094-13c11500-24ef-4468-9f33-dc9d564238e3](https://user-images.githubusercontent.com/1423657/186014786-165b18da-e808-4cf7-a6fc-eb90df705400.gif)](https://qryn.metrico.in)
+[![qryn](https://user-images.githubusercontent.com/1423657/259414028-ce4c8603-be1f-4ca9-a0fa-556d84c5660c.gif)](https://sipcapture.org)
+
+[![qryn](https://user-images.githubusercontent.com/1423657/186014786-165b18da-e808-4cf7-a6fc-eb90df705400.gif)](https://qryn.metrico.in)
 
 <br>
 
@@ -54,6 +59,10 @@ The demo generates correlated _logs, metrics and traces_ with autoconfigured dat
   - ```Tempo```
   - ```Prometheus```
   - ```Flux```
+
+#### Data Ingestion
+The demo supports all ingestion protocols supported by **homer** _(hep)_ and **qryn** _(logql, prometheus, influx, elastic, opentelemetry, etc)_
+
 
 #### Go Pro
 Loving it? Learn how to send your own data using our [online documentation](https://qryn.metrico.in) 
