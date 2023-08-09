@@ -69,6 +69,8 @@ Loving it? Learn how to send your own data using our [online documentation](http
 
 <br>
 
+![image](https://github.com/sipcapture/homer-docker/assets/1423657/a3ed8398-4930-4c00-a593-782ce1696756)
+
 ![image](https://user-images.githubusercontent.com/1423657/183254312-b52811e5-f563-440e-84e4-8312714a4c9b.png)
 
 ![image](https://user-images.githubusercontent.com/1423657/183254290-fac87747-51ce-4648-a7aa-073fdcdd6c10.png)
