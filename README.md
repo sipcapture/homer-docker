@@ -1,14 +1,15 @@
 
-<img src="https://user-images.githubusercontent.com/1423657/55069501-8348c400-5084-11e9-9931-fefe0f9874a7.png" width=200/>
+<img src="https://user-images.githubusercontent.com/1423657/55069501-8348c400-5084-11e9-9931-fefe0f9874a7.png" height=200/><img src="https://github.com/sipcapture/homer-docker/assets/1423657/8997d282-0c29-4137-a1ef-e9be79a54284" height=200/>
 
-# HOMER 10 Docker Containers & Recipes
-http://sipcapture.org
 
-This repository provides ready-to-run [HOMER](https://github.com/sipcapture/homer/tree/homer) recipes using `Docker` and [docker-compose](https://docs.docker.com/compose/install/)
+# [HOMER 10](http://sipcapture.org)
+## Docker Recipes
+
+This repository provides ready-to-run [HOMER 10](https://github.com/sipcapture/homer/tree/homer) recipes using `Docker` and [docker-compose](https://docs.docker.com/compose/install/)
 
 ### Running Containers
 
-To start your own bundle or choice, just run the following command inside the selected directory:
+To start your own bundle or choice, just run the following command inside the selected directory folder:
 
 ```bash
 $ docker-compose up -d
