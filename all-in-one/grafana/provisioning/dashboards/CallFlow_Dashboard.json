@@ -30,7 +30,7 @@
       "title": "HOMER Kiosk",
       "tooltip": "",
       "type": "link",
-      "url": "/d/c10b3643-9226-439b-a508-14dd61916889/testing-flow?kiosk=true"
+      "url": "/d/homer10/call-flow?kiosk=true"
     }
   ],
   "liveNow": false,
