@@ -28,7 +28,7 @@ datasources:
           url: '$${__value.raw}'
         - name: callid
           matcherRegex: ".*?[c|C]all-ID:\s?(.*)(?:\r|\n|\r\n)"
-          url: '/d/c10b3643-9226-439b-a508-14dd61916889/call-flow?var-search=$${__value.raw}'
+          url: '/d/homer10/call-flow?var-search=$${__value.raw}'
           urlDisplayLabel: 'Call Flow'
   - name: Tempo
     type: tempo
