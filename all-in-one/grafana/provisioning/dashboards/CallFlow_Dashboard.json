@@ -158,7 +158,11 @@
       "options": {
         "aboveArrow": "hostname",
         "belowArrow": "node",
-        "colorGenerator": "",
+        "colorGenerator": [
+          "src_ip",
+          "dst_ip",
+          "type"
+        ],
         "destination": [
           "dst_ip",
           "dst_port"
@@ -498,6 +502,6 @@
   "timezone": "",
   "title": "Call Flow",
   "uid": "homer10",
-  "version": 2,
+  "version": 1,
   "weekStart": ""
 }
