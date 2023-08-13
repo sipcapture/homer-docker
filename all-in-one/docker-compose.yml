@@ -120,7 +120,7 @@ services:
     - "HEP_SERVER=heplify-server"
     - "HEP_PORT=9060"
     - "HEP_PROTO=udp4"
-    - "LOOP=5"
+    - "LOOP=10"
     restart: unless-stopped
     depends_on:
       - qryn
@@ -134,7 +134,7 @@ services:
     - "HEP_PORT=9060"
     - "HEP_PROTO=udp4"
     - "LOOP=1"
-    - "SLEEP=30"
+    - "SLEEP=60"
     - "HEP_CONFIG=b2bcall_rtcp_bad.js"
     restart: unless-stopped
     depends_on:
@@ -168,8 +168,10 @@ services:
     depends_on:
       - qryn
       - clickhouse-server
+      - vector
     expose:
       - 9060
+      - 9061
       - 9090
       - 9096
     logging:
