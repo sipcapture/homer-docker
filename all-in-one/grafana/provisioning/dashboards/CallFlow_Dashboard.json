@@ -15,10 +15,9 @@
       }
     ]
   },
-  "editable": false,
+  "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
-  "id": 5,
   "links": [
     {
       "asDropdown": false,
@@ -140,7 +139,7 @@
         },
         "showAdvancedTypes": false
       },
-      "pluginVersion": "10.0.2",
+      "pluginVersion": "10.0.3",
       "title": "HOMER 10",
       "type": "canvas"
     },
@@ -159,6 +158,7 @@
       "options": {
         "aboveArrow": "hostname",
         "belowArrow": "node",
+        "colorGenerator": "",
         "destination": [
           "dst_ip",
           "dst_port"
@@ -187,7 +187,8 @@
             "uid": "loki"
           },
           "editorMode": "code",
-          "expr": "{job="heplify-server", src_ip=~"$src_ip", dst_ip=~"$dst_ip"} | response=~"$method" or type!="sip" |~ `$search`",
+          "expr": "{job=\"heplify-server\", src_ip=~\"$src_ip\", dst_ip=~\"$dst_ip\"} | response=~\"$method\" or type!=\"sip\" |~ `$search`",
+          "key": "Q-c40f2e2b-564b-49f7-affa-cdeff6d70adf-0",
           "legendFormat": "",
           "maxLines": 100,
           "queryType": "range",
@@ -497,6 +498,6 @@
   "timezone": "",
   "title": "Call Flow",
   "uid": "homer10",
-  "version": 56,
+  "version": 2,
   "weekStart": ""
 }
