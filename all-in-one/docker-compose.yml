@@ -119,6 +119,7 @@ services:
     environment:
     - "HEP_SERVER=heplify-server"
     - "HEP_PORT=9060"
+    - "HEP_PROTO=udp4"
     - "LOOP=5"
     restart: unless-stopped
     depends_on:
@@ -131,6 +132,7 @@ services:
     environment:
     - "HEP_SERVER=heplify-server"
     - "HEP_PORT=9060"
+    - "HEP_PROTO=udp4"
     - "LOOP=1"
     - "SLEEP=30"
     - "HEP_CONFIG=b2bcall_rtcp_bad.js"
