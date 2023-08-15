@@ -32,7 +32,8 @@ docker-compose up -d
 #### Send Data
 This demo comes with auto-generated data, but you can still send your own streams
 ##### HEP
-Send some HEP traffic to the HEP socket on port 9060 or use `hepgen` generated traffic
+Send some HEP traffic to the HEP socket on port 9060/udp or 9061/tcp or use the demo `hepgen` generated traffic
+
 ##### Others
 Send data using a variety of protocols
 
