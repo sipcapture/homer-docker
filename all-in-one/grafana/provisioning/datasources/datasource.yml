@@ -19,7 +19,7 @@ datasources:
     jsonData:
       derivedFields:
         - datasourceUid: tempo
-          matcherRegex: "^.*?traceI[d|D]=(\\w+).*$"
+          matcherRegex: "^.*?traceI[dD]=(\\w+).*$"
           name: traceId
           url: '$${__value.raw}'
         - datasourceUid: tempo
@@ -27,7 +27,11 @@ datasources:
           name: traceID
           url: '$${__value.raw}'
         - name: callid
-          matcherRegex: ".*?[c|C]all-ID:\\s?(.*)(?:\r|\n|\r\n)"
+          matcherRegex: ".*?[cC]all-ID:\\s?(.*)(?:\r|\n|\r\n)"
+          url: '/d/homer10/call-flow?var-search=$${__value.raw}'
+          urlDisplayLabel: 'Call Flow'
+        - name: correlationId 
+          matcherRegex: ".*?[pP]-[cC]harging-[vV]ector:\\s?.*icid-value=\"?(.*?)(?:\"|;|\r|\n|\r\n)"
           url: '/d/homer10/call-flow?var-search=$${__value.raw}'
           urlDisplayLabel: 'Call Flow'
   - name: Tempo
