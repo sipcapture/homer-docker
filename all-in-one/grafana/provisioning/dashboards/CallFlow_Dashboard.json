@@ -159,8 +159,7 @@
         "aboveArrow": "hostname",
         "belowArrow": "node",
         "colorGenerator": [
-          "src_ip",
-          "dst_ip",
+          "callid",
           "type"
         ],
         "destination": [
@@ -191,7 +190,7 @@
             "uid": "loki"
           },
           "editorMode": "code",
-          "expr": "{job=\"heplify-server\", src_ip=~\"$src_ip\", dst_ip=~\"$dst_ip\"} | response=~\"$method\" or type!=\"sip\" |~ `${search:raw}`",
+          "expr": "{job=\"heplify-server\", src_ip=~\"$src_ip\", dst_ip=~\"$dst_ip\"} | response=~\"$method\" or type!=\"sip\" |~ `${search:raw}` | regexp "Call-ID:\s+(?<callid>.+?\r\n)"",
           "key": "Q-c40f2e2b-564b-49f7-affa-cdeff6d70adf-0",
           "legendFormat": "",
           "maxLines": 100,
