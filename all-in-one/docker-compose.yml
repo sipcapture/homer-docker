@@ -75,7 +75,7 @@ services:
         max-size: "10m"
 
   vector:
-    image: timberio/vector:latest-alpine
+    image: timberio/vector::0.31.0-alpine
     container_name: vector
     restart: unless-stopped
     volumes:
