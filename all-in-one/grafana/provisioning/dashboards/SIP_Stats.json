@@ -112,9 +112,9 @@
             "uid": "prometheus"
           },
           "editorMode": "code",
-          "expr": "stddev_over_time(heplify_method_response[$__interval]) by (method, response)",
+          "expr": "avg(stddev_over_time(heplify_method_response[$__interval]) by (method, response)",
           "format": "time_series",
-          "interval": "1m",
+          "interval": "5m",
           "intervalFactor": 1,
           "legendFormat": "__auto",
           "range": true,
