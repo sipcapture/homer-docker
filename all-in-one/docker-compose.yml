@@ -32,7 +32,7 @@ services:
         max-size: "10m"
 
   clickhouse-server:
-    image: clickhouse/clickhouse-server:22.8-alpine
+    image: clickhouse/clickhouse-server:23.3-alpine
     container_name: clickhouse-server
     restart: unless-stopped
     volumes:
