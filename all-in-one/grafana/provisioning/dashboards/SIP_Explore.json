@@ -24,7 +24,6 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
-  "id": 8,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -57,7 +56,7 @@
             "uid": "loki"
           },
           "editorMode": "code",
-          "expr": "{job=\"heplify-server\"}",
+          "expr": "{job=\"heplify-server\"}  |~ `${search}`",
           "key": "Q-b05da2e1-8d44-4f4e-b2d8-46be333352f1-0",
           "queryType": "range",
           "refId": "A"
@@ -67,11 +66,23 @@
       "type": "logs"
     }
   ],
-  "schemaVersion": 37,
+  "refresh": "",
+  "schemaVersion": 38,
   "style": "dark",
   "tags": [],
   "templating": {
-    "list": []
+    "list": [
+      {
+        "current": {},
+        "hide": 0,
+        "label": "Full-Text Search",
+        "name": "search",
+        "options": [],
+        "query": "",
+        "skipUrlSync": false,
+        "type": "textbox"
+      }
+    ]
   },
   "time": {
     "from": "now-6h",
