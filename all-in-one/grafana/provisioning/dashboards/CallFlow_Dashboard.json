@@ -475,21 +475,13 @@
           "value": "$__all"
         },
         "hide": 0,
-        "includeAll": true,
         "label": "Full-Text Regex Search",
-        "multi": false,
         "name": "search",
-        "options": [
-          {
-            "selected": true,
-            "text": "All",
-            "value": "$__all"
-          }
-        ],
+        "options": [],
         "query": "",
         "queryValue": "",
         "skipUrlSync": false,
-        "type": "custom"
+        "type": "textbox"
       }
     ]
   },
