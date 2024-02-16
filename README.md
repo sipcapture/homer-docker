@@ -16,7 +16,9 @@ This repository provides ready-to-run [HOMER 10](https://github.com/sipcapture/h
 To start your own bundle or choice, just run the following command inside the selected directory folder:
 
 ```bash
-$ docker-compose up -d
+git clone https://github.com/sipcapture/homer-docker.git
+cd all-in-one
+docker-compose up -d
 ```
 
 #### Data Mapping
