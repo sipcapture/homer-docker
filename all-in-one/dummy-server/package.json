@@ -17,7 +17,7 @@
     "@opentelemetry/instrumentation": "^0.27.0",
     "@opentelemetry/resources": "^1.0.1",
     "@opentelemetry/sdk-trace-base": "^1.0.1",
-    "@opentelemetry/sdk-trace-node": "^1.0.1",
+    "@opentelemetry/sdk-trace-node": "^2.10.0",
     "@opentelemetry/semantic-conventions": "^1.0.1",
     "request-promise": "^4.2.6",
     "request-promise-native": "^1.0.9",
