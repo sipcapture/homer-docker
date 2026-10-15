@@ -1,5 +1,5 @@
 const tracing = require('./tracing')();
-const request = require('request-promise-native');
+const pushLoki = require('./loki-push');
 
 module.exports = (context) => {
   // Tracing
@@ -19,26 +19,14 @@ module.exports = (context) => {
       }
 
       try {
-          await request(
-              {
-                  uri: 'http://qryn:3100/loki/api/v1/push',
-                  method: 'POST',
-                  headers: {
-                      'Content-type': 'application/json'
+          await pushLoki({
+              streams: [
+                  {
+                      stream,
+                      values: [[`${Date.now() * 1000000}`, message]],
                   },
-                  json: true,
-                  body: {
-                      'streams': [
-                          {
-                              stream,
-                              'values': [
-                                  [ `${Date.now() * 1000000}`, message ]
-                              ]
-                          }
-                      ]
-                  }
-              },
-          );
+              ],
+          });
       } catch (err) {
           console.log(err);
           error = true;
