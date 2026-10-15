@@ -10,31 +10,25 @@ module.exports = (serviceName) => {
   const { ZipkinExporter } = require('@opentelemetry/exporter-zipkin');
   //const { JaegerExporter } = require('@opentelemetry/exporter-jaeger');
   // const { OTLPTraceExporter } = require('@opentelemetry/exporter-trace-otlp-http');
-  const { Resource } = require('@opentelemetry/resources');
-  const { SemanticResourceAttributes } = require('@opentelemetry/semantic-conventions');
+  const { resourceFromAttributes } = require('@opentelemetry/resources');
+  const { ATTR_SERVICE_NAME } = require('@opentelemetry/semantic-conventions');
   let getNodeAutoInstrumentations;
   let registerInstrumentations;
   let W3CTraceContextPropagator;
 
   // Create a tracer provider
-  const provider = new NodeTracerProvider({
-    resource: new Resource({
-      [SemanticResourceAttributes.SERVICE_NAME]: serviceName,
-    }),
-  });
-
-  // Export to Jaeger
-  //const exporter = new OTLPTraceExporter(options);
-
   // Export to Zipkin/qryn
   const options = {
     url: 'http://qryn:3100/tempo/api/push',
   }
   const exporter = new ZipkinExporter(options);
 
-  // Use simple span (should probably use Batch)
-  const processor = new SimpleSpanProcessor(exporter);
-  provider.addSpanProcessor(processor);
+  const provider = new NodeTracerProvider({
+    resource: resourceFromAttributes({
+      [ATTR_SERVICE_NAME]: serviceName,
+    }),
+    spanProcessors: [new SimpleSpanProcessor(exporter)],
+  });
   provider.register();
 
   // Return instances of the API and the tracer to the calling app
